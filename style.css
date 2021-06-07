@@ -1,0 +1,134 @@
+html,
+body,
+.wrapper{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: cursive;
+    background-color: cadetblue;
+}
+
+.wrapper{
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+header{
+    text-align: center;
+    padding: 100px;
+    padding-top: 0px;
+    color:honeydew;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.card{
+    background-color:mintcream;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: oldlace;
+    color:rgb(158, 118, 118);
+    font-size: 3em;
+    text-align: center;
+    font-style: bold;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px 50px;
+}
+/* line */
+.card-header::after{
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: lavender;
+    height: 4px;
+}
+
+.card-body{
+    min-height: 100px;
+}
+
+.card-footer{
+    text-align: center;
+}
+
+.card-footer::before{
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: lavender;
+    height: 2px;
+}
+
+.card-header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.btn{
+    border: none;
+    background-color:wheat;
+    border-radius: 25px;
+    box-shadow: lavenderblush;
+    color: rosybrown;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 25px;
+    margin: 20px 20px 20px 24px;
+    padding: 30px 50px;
+    text-align: center;
+    cursor: pointer;
+}
+/* disabled? */
+button[disabled]{
+    cursor: default;
+    color: #000;
+}
+
+/* floating what right? */
+.float-right{
+    float: center;
+}
+
+/* appearance mox and webkit? */
+#password{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:none;
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 70px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 6px double slategray;
+    border-radius: 8px;
+    resize: none;
+    overflow: hidden;
+}
+
+@media (max-width: 700px){
+    .btn{
+        font-size: x-large;
+        margin: 15px 0px 0px 0px;
+        padding: auto;
+    }
+    #password{
+        font-size: larger;
+    }
+}
+
+@media (max-width: 500px) {
+    .btn{
+        font-size: large;
+    }
+}
