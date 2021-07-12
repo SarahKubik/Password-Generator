@@ -1,27 +1,125 @@
-// generate random password
+// Array of special characters to be included in password
+var specialCharacters = [
+  '@',
+  '%',
+  '+',
+  '\\',
+  '/',
+  "'",
+  '!',
+  '#',
+  '$',
+  '^',
+  '?',
+  ':',
+  ',',
+  ')',
+  '(',
+  '}',
+  '{',
+  ']',
+  '[',
+  '~',
+  '-',
+  '_',
+  '.',
+];
 
-function writePassword(){
-    var password = generatePassword();
-    var passwordText = document.querySelector(`#password`);
+// Array of numeric characters to be included in password
+var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-    passwordText.value = password;
-    {
-        generateBtn.addEventListener(`click`,writePassword);
-    }
-        // set password length/complexity
-        let complexity = document.getElementsByid("password").value;
+// Array of lowercase characters to be included in password
+var lowerCasedCharacters = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
+];
 
-        //[possible password values
-        let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+// Array of uppercase characters to be included in password
+var upperCasedCharacters = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z',
+];
 
-        let password = "";
+// Function to prompt user for password options
+function getPasswordOptions() {
+  // Variable to store length of password from user input
+  var length = parseInt(
+    prompt('How many characters would you like your password to contain?'),
+    10
+  );
 
-        // create loop to choose password characters
-        for(var i =0; i<= complexity; 1++){
-            password = password + values.charAt(Math.floor(Math.random() * Math.floor(value.length -1)));
-        }
+  // Conditional statement to check if password length is a number. Prompts end if this evaluates false
+  if (Number.isNaN(length)) {
+    alert('Password length must be provided as a number');
+    return null;
+  }
 
-        // add passwork to card
+  // Conditional statement to check if password length is at least 8 characters long. Prompts end if this evaluates false
+  if (length < 8) {
+    alert('Password length must be at least 8 characters');
+    return null;
+  }
 
-        document.querySelector("#generate").value = password;
-}
+  // Conditional statement to check if password length is less than 128 characters long. Prompts end if this evaluates false
+  if (length > 128) {
+    alert('Password length must less than 129 characters');
+    return null;
+  }
+
+  // Variable to store boolean regarding the inclusion of special characters
+  var hasSpecialCharacters = confirm(
+    'Click OK to confirm including special characters.'
+  );
+
+  // Variable to store boolean regarding the inclusion of numeric characters
+  var hasNumericCharacters = confirm(
+    'Click OK to confirm including numeric characters.'
+  )}
