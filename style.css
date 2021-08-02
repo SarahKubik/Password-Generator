@@ -1,7 +1,7 @@
 html,
 body,
-.wrapper{
-    height: 100%;
+.wrapper{ 
+    height: 50%;
     margin: 0;
     padding: 0;
 }
@@ -9,47 +9,54 @@ body,
 body{
     font-family: cursive;
     background-color: cadetblue;
+    text-align: center;
 }
 
 .wrapper{
-    padding-top: 50px;
+    padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
 }
 
 header{
+    display: -webkit-inline-flex;
     text-align: center;
-    padding: 100px;
+    padding: 0px;
     padding-top: 0px;
     color:honeydew;
-    font-size: 4em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 .card{
+    display:flexbox;
     background-color:mintcream;
-    border-radius: 5px;
+    align-self: auto;
+    border-radius: 1px;
     border-width: 1px;
     box-shadow: oldlace;
     color:rgb(158, 118, 118);
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     font-style: bold;
-    margin: 0 auto;
-    max-width: 900px;
-    padding: 20px 50px;
+    margin: auto;
+    max-width: 450px;
+    padding: 25px 25px;
 }
 /* line */
 .card-header::after{
     content: "";
-    display: block;
+    display:-webkit-inline-flexbox;
     width: 100%;
     background-color: lavender;
-    height: 4px;
+    height: 0px;
 }
 
 .card-body{
-    min-height: 100px;
+    align-self: auto;
+    min-height: 10px;
+    min-width: 10px;
+    
 }
 
 .card-footer{
@@ -58,16 +65,16 @@ header{
 
 .card-footer::before{
     content: "";
-    display: block;
+    display:-webkit-inline-flexbox;
     width: 100%;
     background-color: lavender;
-    height: 2px;
+    height: 0px;
 }
 
 .card-header::after{
     content: "";
-    display: block;
-    clear: both;
+    display: -webkit-inline-flexbox;
+    clear: both ;
 }
 .btn{
     border: none;
@@ -75,7 +82,7 @@ header{
     border-radius: 25px;
     box-shadow: lavenderblush;
     color: rosybrown;
-    display: inline-block;
+    display: -webkit-inline-flex;
     font-size: 40px;
     font-weight: bolder;
     line-height: 25px;
@@ -97,23 +104,21 @@ button[disabled]{
 
 /* appearance mox and webkit? */
 #password{
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    -webkit-appearance:inherit;
+    -moz-appearance: inherit;
     appearance: none;
-    border:none;
-    display: block;
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 70px;
+    display:-webkit-inline-flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border: 6px double slategray;
-    border-radius: 8px;
-    resize: none;
-    overflow: hidden;
+    align-content: center;
+    border-radius: 4px;
+    resize: auto;
 }
 
 @media (max-width: 700px){
@@ -123,7 +128,7 @@ button[disabled]{
         padding: auto;
     }
     #password{
-        font-size: larger;
+        font-size: small;
     }
 }
 
@@ -131,4 +136,4 @@ button[disabled]{
     .btn{
         font-size: large;
     }
-}
+}  
