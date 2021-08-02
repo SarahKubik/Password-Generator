@@ -10,7 +10,7 @@ The user clicks the button they will be prompted to answer a series of questions
 
 ## Mock-up
 
-![The application has a brown button labeled "Generate Password"](Assets/images/PW GENERATOR MOCKUP.JPG)
+![The application has a brown button labeled Generate Password](./assets/images/pwgeneratormockup.jpg)
 
 ## Installation
 
